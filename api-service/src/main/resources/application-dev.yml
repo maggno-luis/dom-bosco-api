@@ -1,0 +1,33 @@
+server:
+  port: 9090
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/dom_bosco
+    username: root
+    password: 74108520
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  security:
+    jwt:
+      secret-key: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+      expiration-time: 3600000
+
+  data:
+    mongodb:
+      username: magno
+      password: magno
+      host: localhost
+      port: 27017
+      database: chat_app
+      authentication-database: admin
+
+  config:
+    import: optional:classpath:/application-dev.yml
+
+
+
+
+
